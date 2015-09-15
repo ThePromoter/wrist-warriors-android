@@ -1,9 +1,12 @@
-package com.wristwarriors;
+package com.wristwarriors.activity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.wristwarriors.R;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -11,6 +14,13 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        authorize();
+    }
+
+    private void authorize() {
+        Intent myIntent = new Intent(getBaseContext(), OauthActivity.class);
+        startActivity(myIntent);
     }
 
     @Override

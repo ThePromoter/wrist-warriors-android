@@ -26,3 +26,5 @@ local.properties
 ehthumbs.db
 Thumbs.db
 app/src/main/res/values/keys.xml
+
+build/*
